@@ -1,0 +1,12 @@
+Package: sentanaly
+Title: Analyszes text for sentiment analysis 
+Version: 0.0.0.9000
+Authors@R: person("Isha", "Jigajinni", role=c("aut", "cre"), email = "ishajigajinni@usf.edu")
+Description: This package takes in a group of text and conducts a sentiment analysis to determine what percentage of 
+it has a negative or positive connotation. This will be done using the bing dictionary of positive and negative 
+correlation.
+Depends: R (>= 3.1.2)
+Imports:
+    RCurl
+License: CC0
+LazyData: true
