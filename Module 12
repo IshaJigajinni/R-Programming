@@ -1,0 +1,19 @@
+library(ggplot2)
+ggplot(mtcars, aes(x = mpg)) + 
+  geom_histogram(binwidth = 2, fill = "white", color = "black") + 
+  labs(title = "Histogram of Miles Per Gallon (mpg)", x = "mpg", y = "Count")
+ggplot(mtcars, aes(x = factor(cyl), y = mpg)) + 
+  geom_boxplot(fill = "pink") + 
+  labs(title = "Boxplot of mpg by Cylinder", x = "Number of Cylinders", y = "mpg")
+ggplot(mtcars, aes(x = wt, y = mpg, color = factor(am))) + 
+  geom_line() + 
+  geom_point() + 
+  labs(title = "MultiLine Chart of wt vs mpg by Transmission", 
+       x = "Weight (wt)", 
+       y = "Miles per Gallon (mpg)",
+       color = "Transmission (am)") + 
+  scale_color_discrete(labels = c("Automatic", "Manual"))
+ggplot(mtcars, aes(x = rownames(mtcars), y = wt)) + 
+  geom_bar(stat = "identity", fill = "turquoise") + 
+  labs(title = "Car Weight by Model", x = "Car Model", y = "Weight (wt)") + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
